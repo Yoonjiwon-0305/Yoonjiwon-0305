@@ -4,7 +4,7 @@
   <table>
     <tr>
       <td width="25%" align="center">
-        <img src="images/profile.jpg" alt="윤지원" width="180" height="240" style="border-radius: 8px; border: 3px solid #FF6B35;">
+        <img src="KakaoTalk_20260603_233310769.jpg" alt="윤지원" width="180" height="240" style="border-radius: 8px; border: 3px solid #FF6B35;">
       </td>
       <td width="75%">
         <h2>윤지원</h2>
