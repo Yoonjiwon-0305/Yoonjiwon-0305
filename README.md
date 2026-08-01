@@ -52,7 +52,7 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 - 32-bit RISC Processor 설계 · UVM Verification & Functional Coverage
 - 온디바이스 AI 시스템 구축 · 임베디드 시스템
 
-**sPTA · 반도체 구조형성 공정 실습** | 이수
+**SPTA · 반도체 구조형성 공정 실습** | 이수
 
 - 클린룸 입실 실습 — Photolithography · Dry/Wet Etch · Oxidation · Wet Cleaning
 - 제조 공정에 대한 이해가 설계의 완성도와 신뢰성을 높이는 기반임을 체감
