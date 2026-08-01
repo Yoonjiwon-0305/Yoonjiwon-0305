@@ -42,18 +42,24 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 ## 🎓 Education & Awards
 
 **한성대학교 · 전자시스템반도체학과** | 졸업
-디지털 논리 설계 · 마이크로프로세서 설계 · 회로 설계 · FPGA 설계 및 구현
-🏆 교내 캡스톤 디자인 경진대회 **은상** — Vision Mandarin
+
+- 디지털 논리 설계 · 마이크로프로세서 설계 · 회로 설계 · FPGA 설계 및 구현
+- 🏆 교내 캡스톤 디자인 경진대회 **은상** — Vision Mandarin
 
 **대한상공회의소 서울기술교육센터 · 온디바이스 AI 반도체 설계 과정 (1기)** | 수료
-Verilog HDL & SystemVerilog · ARM AMBA BUS (AXI4-Lite, APB) · 32-bit RISC Processor 설계
-UVM Verification & Functional Coverage · 온디바이스 AI 시스템 구축 · 임베디드 시스템
 
-**SPTA · 반도체 구조형성 공정 실습** | 이수
-클린룸 입실 실습 — Photolithography · Dry/Wet Etch · Oxidation · Wet Cleaning
-제조 공정에 대한 이해가 설계의 완성도와 신뢰성을 높이는 기반임을 체감했습니다.
+- Verilog HDL & SystemVerilog · ARM AMBA BUS (AXI4-Lite, APB)
+- 32-bit RISC Processor 설계 · UVM Verification & Functional Coverage
+- 온디바이스 AI 시스템 구축 · 임베디드 시스템
 
-**Certifications** —  TOEIC Speaking IM2
+**sPTA · 반도체 구조형성 공정 실습** | 이수
+
+- 클린룸 입실 실습 — Photolithography · Dry/Wet Etch · Oxidation · Wet Cleaning
+- 제조 공정에 대한 이해가 설계의 완성도와 신뢰성을 높이는 기반임을 체감
+
+**Certifications**
+
+- TOEIC 700+ · TOEIC Speaking IM2
 
 ---
 
