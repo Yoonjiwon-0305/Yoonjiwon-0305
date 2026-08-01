@@ -52,7 +52,7 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 - 32-bit RISC Processor 설계 · UVM Verification & Functional Coverage
 - 온디바이스 AI 시스템 구축 · 임베디드 시스템
 
-**SPTA · 반도체 구조형성 공정 실습** | 이수
+**sPTA · 반도체 구조형성 공정 실습** | 이수
 
 - 클린룸 입실 실습 — Photolithography · Dry/Wet Etch · Oxidation · Wet Cleaning
 - 제조 공정에 대한 이해가 설계의 완성도와 신뢰성을 높이는 기반임을 체감
@@ -68,12 +68,11 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 | 프로젝트 | 분류 | 핵심 |
 |---|---|---|
 | [AXI4-Lite SPI/I2C IP + UVM 검증](#1-axi4-lite-기반-spi--i2c-ip-설계-및-uvm-verification) | RTL · 검증 | Functional Coverage 100% |
-| [RISC-V RV32I Single Cycle](#2-risc-v-rv32i-single-cycle-processor) | RTL | RV32I 전체 명령어 구현 |
-| [RISC-V Multi Cycle & APB BUS](#3-risc-v-multi-cycle-processor--apb-bus) | RTL · 버스 | 주변장치 6종 MMIO 통합 |
+| [RISC-V RV32I Processor & APB BUS](#2-risc-v-rv32i-processor--apb-bus) | RTL · 버스 | RV32I 전체 명령어 · 주변장치 6종 MMIO 통합 |
+| [UART Stopwatch & Digital Watch](#3-uart-기반-fpga-stopwatch--digital-watch) | RTL · 통신 | UART Rx 직접 설계 |
 | [다중 FPGA 영상 통합 연주 시스템](#4-다중-fpga-영상-통합-연주-시스템-the-bremen-town-musicians) | 영상 · 신호처리 | SPI 대역폭 50% 절감 |
-| [UART Stopwatch & Digital Watch](#5-uart-기반-fpga-stopwatch--digital-watch) | RTL · 통신 | UART Rx 직접 설계 |
-| [Vision Mandarin](#6-vision-mandarin--ai-기반-귤-자동-선별-시스템-) | 온디바이스 AI | 추론 성능 6.9배 향상 |
-| [운전자 졸음 감지 시스템](#7-jetson-orin-nano-기반-운전자-졸음-감지-시스템) | 온디바이스 AI | Head Pose 기반 판단 로직 |
+| [Vision Mandarin](#5-vision-mandarin--ai-기반-귤-자동-선별-시스템-) | 온디바이스 AI | 추론 성능 6.9배 향상 |
+| [운전자 졸음 감지 시스템](#6-jetson-orin-nano-기반-운전자-졸음-감지-시스템) | 온디바이스 AI | Head Pose 기반 판단 로직 |
 
 ---
 
@@ -81,14 +80,14 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 ### 1. AXI4-Lite 기반 SPI / I2C IP 설계 및 UVM Verification
 
-**KCCI 캡스톤 · 팀 프로젝트 | 1개월**
+**팀 프로젝트 | 2주**
 
 > MicroBlaze에 SPI/I2C Master를 AXI4-Lite로 연동하고, UVM 기반 검증 환경으로 기능을 검증
 
-- AXI4-Lite Slave Interface 및 Register Map 설계, SPI/I2C Master FSM 구현
-- **UVM Driver / Monitor / Scoreboard / Coverage 환경 전체 구축**
+- **담당: I2C Master IP 설계** — AXI4-Lite Slave Interface, Register Map, I2C Master FSM 구현
+- **UVM 검증 환경 공동 개발** — Driver / Monitor / Scoreboard / Coverage 구성
 - Constrained Random 기반 256 Transaction, **Functional Coverage 100% 달성** ✅
-- C 펌웨어로 레지스터 제어, FPGA 2대 간 SPI/I2C Master-Slave 실통신 검증 완료
+- 타이머 인터럽트 기반 FND 제어 펌웨어(C) 작성, FPGA 2대 간 Master-Slave 실통신 검증 완료
 
 **Tech**: `SystemVerilog` `UVM` `AXI4-Lite` `MicroBlaze` `Vivado` `VCS` `Verdi`
 
@@ -96,40 +95,30 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 ---
 
-### 2. RISC-V RV32I Single Cycle Processor
+### 2. RISC-V RV32I Processor & APB BUS
 
-**개인 프로젝트 | 1개월**
+**개인 프로젝트 → 팀 프로젝트 | 각 1개월**
 
-> RV32I ISA 기반 단일 사이클 프로세서 설계
+> 단일 사이클 프로세서를 직접 설계한 뒤, 멀티 사이클 구조와 APB 버스 기반 시스템으로 확장
 
+**Single Cycle Processor** — 개인 프로젝트
 - Datapath 및 Control Unit 구현 (opcode, funct3, funct7 기반 제어신호 생성)
 - R / I / S / B / U / J Type 명령어 전체 구현
 - Assembly 프로그램 기반 시뮬레이션 검증
 
-**Tech**: `SystemVerilog` `Vivado` `FPGA (Basys3)`
-
-🔗 [Repository](https://github.com/Yoonjiwon-0305/RISC_V)
-
----
-
-### 3. RISC-V Multi Cycle Processor & APB BUS
-
-**팀 프로젝트 | 1개월**
-
-> 멀티 사이클 프로세서와 APB 버스 기반 시스템 통합
-
+**Multi Cycle Processor & APB BUS** — 팀 프로젝트
 - **담당: APB Master 및 RAM(APB Slave) 설계**
 - Memory-Mapped I/O를 통한 주변장치 6종 통합
 - APB Protocol SETUP/ACCESS 타이밍 및 Address Decoder 개선
 - C Firmware 기반 메모리 접근 검증
 
-**Tech**: `SystemVerilog` `AMBA APB` `Vivado` `FPGA`
+**Tech**: `SystemVerilog` `AMBA APB` `Vivado` `FPGA (Basys3)`
 
 🔗 [Repository](https://github.com/Yoonjiwon-0305/RISC_V)
 
 ---
 
-### 5. UART 기반 FPGA Stopwatch & Digital Watch
+### 3. UART 기반 FPGA Stopwatch & Digital Watch
 
 **개인 프로젝트 | 1개월**
 
@@ -173,7 +162,7 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 ## 🤖 On-device AI
 
-### 6. Vision Mandarin — AI 기반 귤 자동 선별 시스템 🏆
+### 5. Vision Mandarin — AI 기반 귤 자동 선별 시스템 🏆
 
 **졸업작품 · 팀 프로젝트 | 교내 캡스톤 경진대회 은상**
 
@@ -190,7 +179,7 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 ---
 
-### 7. Jetson Orin Nano 기반 운전자 졸음 감지 시스템
+### 6. Jetson Orin Nano 기반 운전자 졸음 감지 시스템
 
 **팀 프로젝트 | 2주**
 
