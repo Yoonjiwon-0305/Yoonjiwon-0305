@@ -94,3 +94,102 @@ RTL 설계와 UVM 검증을 중심으로, 임베디드 시스템과 온디바이
 **팀 프로젝트 | 1개월**
 
 > 멀티 사이클 프로세서와 APB 버스 기반 시스템 통합
+
+- **담당: APB Master 및 RAM(APB Slave) 설계**
+- Memory-Mapped I/O를 통한 6개 주변장치 통합
+- APB Protocol SETUP/ACCESS 타이밍 및 Address Decoder 개선
+- C Firmware 기반 메모리 접근 검증
+
+**Tech**: `SystemVerilog` `APB` `Vivado` `FPGA`
+
+🔗 [Repository](https://github.com/Yoonjiwon-0305/RISC_V)
+
+---
+
+### 5. OV7670 기반 실시간 영상 처리 및 VGA 디스플레이
+
+**개인 프로젝트 | KCCI 과정 중**
+
+> QVGA 카메라 영상을 VGA 표준 해상도로 실시간 처리·출력
+
+- **SCCB 컨트롤러 설계**: FSM 기반 카메라 초기화 및 레지스터 시퀀싱
+- **VGA Timing Controller**: 640×480@60Hz 표준 타이밍 신호 생성
+- **영상 처리 파이프라인**: QVGA(320×240) → VGA 업스케일링, RGB 채널 선택, 그레이스케일 변환
+- BRAM 추론 및 ROM 기반 이미지 디스플레이 구현
+
+**Tech**: `SystemVerilog` `SCCB` `OV7670` `VGA` `Vivado`
+
+🔗 [Repository](https://github.com/Junbro0608/VGA_CAM_Project/tree/main/Lab00_VGA_OV7670_ctrl) · [Video Processing](https://github.com/Yoonjiwon-0305/Video-Processing)
+
+---
+
+### 6. UART 기반 FPGA Stopwatch & Digital Watch
+
+**개인 프로젝트 | 1개월**
+
+> UART와 FSM을 활용한 PC·보드 통합 제어 스톱워치
+
+- UART 수신기 설계 (4-state FSM, 16배 오버샘플링)
+- ASCII Decoder로 PC 입력을 제어 신호로 변환, 보드 입력과 단일 경로로 통합
+- FSM 기반 Control Unit (Watch/Stopwatch 모드 전환) 및 FND Controller 구현
+
+**Tech**: `Verilog` `UART` `FSM` `Basys3`
+
+🔗 [Repository](https://github.com/Yoonjiwon-0305/verilog)
+
+---
+
+### 7. Vision Mandarin — AI 기반 귤 자동 선별 시스템 🏆
+
+**졸업작품 · 팀 프로젝트 | 교내 캡스톤 경진대회 은상**
+
+> Raspberry Pi4와 Edge TPU를 활용한 실시간 AI 귤 선별 시스템
+
+- **Edge TPU 적용으로 CPU 대비 6.9배 추론 성능 향상** (1.53fps → 10.55fps)
+- YOLO11 기반 귤 크기(Small/Medium/Large) 및 불량 여부 실시간 분류
+- **담당: 컨베이어·분류기 하드웨어 설계 및 센서/모터 제어 회로 구현**
+- 초음파 센서 → DC모터 → 서보모터 자동 분류 파이프라인 구축
+
+**Tech**: `Python` `Raspberry Pi4` `Edge TPU` `YOLO11` `OpenCV` `GPIO`
+
+🔗 [Repository](https://github.com/Yoonjiwon-0305/Graduation-Project)
+
+---
+
+### 8. Jetson Orin Nano 기반 운전자 졸음 감지 시스템
+
+**팀 프로젝트 | 2주**
+
+> AI 기반 실시간 운전자 상태 모니터링 및 음성 안내 시스템
+
+- **담당: Face Detection 모델 학습 및 Head Pose 기반 졸음 판단 알고리즘 구현**
+- Debouncing 프레임 누적을 통한 단계별 졸음 경고 로직 설계
+- Whisper.cpp · Ollama · gTTS 기반 음성 질의응답 및 안내 시스템 연동
+- 화면 중심 거리 기반 운전자 식별로 동승자 오추적 문제 해결
+
+**Tech**: `Python` `YOLOv8` `OpenCV` `Jetson Orin Nano` `Ollama`
+
+🔗 [Repository](https://github.com/Junbro0608/Monitor-drowsy-driving)
+
+---
+
+## 🎓 Education & Awards
+
+### 한성대학교 · 전자시스템반도체학과 | 졸업
+
+디지털 논리 설계 · 마이크로프로세서 설계 · 회로 설계 · FPGA 설계 및 구현
+
+🏆 **교내 캡스톤 디자인 경진대회 은상** — Vision Mandarin
+
+### 대한상공회의소 서울기술교육센터 · 온디바이스 AI 반도체 설계 과정 (1기) | 수료
+
+Verilog HDL & SystemVerilog · ARM AMBA BUS (AXI4-Lite, APB) · 32-bit RISC Processor 설계
+UVM Verification & Functional Coverage · 온디바이스 AI 시스템 구축 · 임베디드 시스템
+
+### sPTA · 반도체 구조형성 공정 실습 | 이수
+
+클린룸에 직접 입실하여 **Photolithography · Dry/Wet Etch · Oxidation · Wet Cleaning** 공정을 실습하고, 반도체 제조 공정의 전반적인 흐름을 익혔습니다. 제조 공정에 대한 이해가 설계의 완성도와 신뢰성을 높이는 기반임을 체감했습니다.
+
+---
+
+**Last Updated**: 2026.08 | 지속적으로 업데이트 중입니다. 📈
