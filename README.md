@@ -53,7 +53,7 @@ UVM Verification & Functional Coverage · 온디바이스 AI 시스템 구축 ·
 클린룸 입실 실습 — Photolithography · Dry/Wet Etch · Oxidation · Wet Cleaning
 제조 공정에 대한 이해가 설계의 완성도와 신뢰성을 높이는 기반임을 체감했습니다.
 
-**Certifications** — TOEIC 700+ · TOEIC Speaking IM2
+**Certifications** —  TOEIC Speaking IM2
 
 ---
 
