@@ -61,14 +61,14 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 ## 📌 Projects at a Glance
 
-| 프로젝트 | 분류 | 핵심 |
+| 프로젝트 | 분류 | 담당 |
 |---|---|---|
-| [AXI4-Lite SPI/I2C IP + UVM 검증](#1-axi4-lite-기반-spi--i2c-ip-설계-및-uvm-verification) | RTL · 검증 | Functional Coverage 100% |
-| [RISC-V RV32I Processor & APB BUS](#2-risc-v-rv32i-processor--apb-bus) | RTL · 버스 | RV32I 전체 명령어 · 주변장치 6종 MMIO 통합 |
-| [다중 FPGA 영상 통합 연주 시스템](#3-다중-fpga-영상-통합-연주-시스템-the-bremen-town-musicians) | 영상 · 신호처리 | SPI 대역폭 50% 절감 |
-| [Vision Mandarin](#4-vision-mandarin--ai-기반-귤-자동-선별-시스템-) | 온디바이스 AI | 추론 성능 6.9배 향상 |
-| [운전자 졸음 감지 시스템](#5-jetson-orin-nano-기반-운전자-졸음-감지-시스템) | 온디바이스 AI | Head Pose 기반 판단 로직 |
-| [UART Stopwatch & Digital Watch](#6-uart-기반-fpga-stopwatch--digital-watch) | RTL · 통신 | UART Rx 직접 설계 |
+| [AXI4-Lite SPI/I2C IP + UVM 검증](#1-axi4-lite-기반-spi--i2c-ip-설계-및-uvm-verification) | RTL · 검증 | I2C Master IP 설계 · UVM 검증 환경 공동 개발 |
+| [RISC-V RV32I Processor & APB BUS](#2-risc-v-rv32i-processor--apb-bus) | RTL · 버스 | 단일 사이클 CPU 전체 설계 · APB Master 및 RAM 설계 |
+| [다중 FPGA 영상 통합 연주 시스템](#3-다중-fpga-영상-통합-연주-시스템-the-bremen-town-musicians) | 영상 · 신호처리 | YCoCg Encoder/Decoder 설계 · SCCB/VGA 선행 구현 |
+| [Vision Mandarin](#4-vision-mandarin--ai-기반-귤-자동-선별-시스템-) | 온디바이스 AI | 컨베이어·분류기 기구 설계 · 센서/모터 제어 회로 |
+| [운전자 졸음 감지 시스템](#5-jetson-orin-nano-기반-운전자-졸음-감지-시스템) | 온디바이스 AI | Face Detection 학습 · Head Pose 졸음 판단 로직 |
+| [UART Stopwatch & Digital Watch](#6-uart-기반-fpga-stopwatch--digital-watch) | RTL · 통신 | UART Rx FSM 직접 설계 · PC/보드 입력 통합 (개인) |
 
 ---
 
