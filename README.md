@@ -52,14 +52,14 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 - 32-bit RISC Processor 설계 · UVM Verification & Functional Coverage
 - 온디바이스 AI 시스템 구축 · 임베디드 시스템
 
-**sPTA · 반도체 구조형성 공정 실습** | 이수
+**SPTA · 반도체 구조형성 공정 실습** | 이수
 
 - 클린룸 입실 실습 — Photolithography · Dry/Wet Etch · Oxidation · Wet Cleaning
 - 제조 공정에 대한 이해가 설계의 완성도와 신뢰성을 높이는 기반임을 체감
 
 **Certifications**
 
-- TOEIC 700+ · TOEIC Speaking IM2
+-  TOEIC Speaking IM2
 
 ---
 
@@ -144,21 +144,6 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 ---
 
-### 🚧 CNN 기반 제스처 인식 스마트 카메라 *(진행 중)*
-
-**팀 프로젝트**
-
-> FPGA에서 CNN 연산을 수행해 제스처를 인식하는 카메라 시스템
-
-- **담당: Convolution 연산부 RTL 구현**
-- 카메라 입력 영상에 대한 실시간 추론 파이프라인 구성
-
-**Tech**: `SystemVerilog` `Vivado` `Python`
-
-🔗 [Repository](https://github.com/Junbro0608/CNN-Based_Gesture_Smart_Camera)
-
----
-
 ## 🤖 On-device AI
 
 ### 4. Vision Mandarin — AI 기반 귤 자동 선별 시스템 🏆
@@ -210,6 +195,23 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 **Tech**: `Verilog` `UART` `FSM` `Basys3`
 
 🔗 [Repository](https://github.com/Yoonjiwon-0305/verilog)
+
+---
+
+## 🚧 진행 중
+
+### CNN 기반 제스처 인식 스마트 카메라
+
+**팀 프로젝트**
+
+> FPGA에서 CNN 연산을 수행해 제스처를 인식하는 카메라 시스템
+
+- **담당: Convolution 연산부 RTL 구현**
+- 카메라 입력 영상에 대한 실시간 추론 파이프라인 구성
+
+**Tech**: `SystemVerilog` `Vivado` `Python`
+
+🔗 [Repository](https://github.com/Junbro0608/CNN-Based_Gesture_Smart_Camera)
 
 ---
 
