@@ -69,10 +69,10 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 |---|---|---|
 | [AXI4-Lite SPI/I2C IP + UVM 검증](#1-axi4-lite-기반-spi--i2c-ip-설계-및-uvm-verification) | RTL · 검증 | Functional Coverage 100% |
 | [RISC-V RV32I Processor & APB BUS](#2-risc-v-rv32i-processor--apb-bus) | RTL · 버스 | RV32I 전체 명령어 · 주변장치 6종 MMIO 통합 |
-| [UART Stopwatch & Digital Watch](#3-uart-기반-fpga-stopwatch--digital-watch) | RTL · 통신 | UART Rx 직접 설계 |
-| [다중 FPGA 영상 통합 연주 시스템](#4-다중-fpga-영상-통합-연주-시스템-the-bremen-town-musicians) | 영상 · 신호처리 | SPI 대역폭 50% 절감 |
-| [Vision Mandarin](#5-vision-mandarin--ai-기반-귤-자동-선별-시스템-) | 온디바이스 AI | 추론 성능 6.9배 향상 |
-| [운전자 졸음 감지 시스템](#6-jetson-orin-nano-기반-운전자-졸음-감지-시스템) | 온디바이스 AI | Head Pose 기반 판단 로직 |
+| [다중 FPGA 영상 통합 연주 시스템](#3-다중-fpga-영상-통합-연주-시스템-the-bremen-town-musicians) | 영상 · 신호처리 | SPI 대역폭 50% 절감 |
+| [Vision Mandarin](#4-vision-mandarin--ai-기반-귤-자동-선별-시스템-) | 온디바이스 AI | 추론 성능 6.9배 향상 |
+| [운전자 졸음 감지 시스템](#5-jetson-orin-nano-기반-운전자-졸음-감지-시스템) | 온디바이스 AI | Head Pose 기반 판단 로직 |
+| [UART Stopwatch & Digital Watch](#6-uart-기반-fpga-stopwatch--digital-watch) | RTL · 통신 | UART Rx 직접 설계 |
 
 ---
 
@@ -118,25 +118,9 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 ---
 
-### 3. UART 기반 FPGA Stopwatch & Digital Watch
+## 📹 Real-time Video & Vision Hardware
 
-**개인 프로젝트 | 1개월**
-
-> UART와 FSM을 활용한 PC·보드 통합 제어 스톱워치
-
-- UART 수신기 설계 (4-state FSM, 16배 오버샘플링)
-- ASCII Decoder로 PC 입력을 제어 신호로 변환, 보드 입력과 단일 경로로 통합
-- FSM 기반 Control Unit (Watch/Stopwatch 모드 전환) 및 FND Controller 구현
-
-**Tech**: `Verilog` `UART` `FSM` `Basys3`
-
-🔗 [Repository](https://github.com/Yoonjiwon-0305/verilog)
-
----
-
-## 📹 Real-time Video & Signal Processing
-
-### 4. 다중 FPGA 영상 통합 연주 시스템 〈The Bremen Town Musicians〉
+### 3. 다중 FPGA 영상 통합 연주 시스템 〈The Bremen Town Musicians〉
 
 **팀 프로젝트 (6인) | 3주** · *OV7670 카메라 및 VGA 출력부는 개인 프로젝트로 선행 구현*
 
@@ -160,9 +144,24 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 ---
 
+### 🚧 CNN 기반 제스처 인식 스마트 카메라 *(진행 중)*
+
+**팀 프로젝트**
+
+> FPGA에서 CNN 연산을 수행해 제스처를 인식하는 카메라 시스템
+
+- **담당: Convolution 연산부 RTL 구현**
+- 카메라 입력 영상에 대한 실시간 추론 파이프라인 구성
+
+**Tech**: `SystemVerilog` `Vivado` `Python`
+
+🔗 [Repository](https://github.com/Junbro0608/CNN-Based_Gesture_Smart_Camera)
+
+---
+
 ## 🤖 On-device AI
 
-### 5. Vision Mandarin — AI 기반 귤 자동 선별 시스템 🏆
+### 4. Vision Mandarin — AI 기반 귤 자동 선별 시스템 🏆
 
 **졸업작품 · 팀 프로젝트 | 교내 캡스톤 경진대회 은상**
 
@@ -179,7 +178,7 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 ---
 
-### 6. Jetson Orin Nano 기반 운전자 졸음 감지 시스템
+### 5. Jetson Orin Nano 기반 운전자 졸음 감지 시스템
 
 **팀 프로젝트 | 2주**
 
@@ -196,18 +195,21 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 ---
 
-### 🚧 CNN 기반 제스처 인식 스마트 카메라 *(진행 중)*
+## 🧩 Fundamentals
 
-**팀 프로젝트**
+### 6. UART 기반 FPGA Stopwatch & Digital Watch
 
-> FPGA에서 CNN 연산을 수행해 제스처를 인식하는 카메라 시스템
+**개인 프로젝트 | 1개월**
 
-- **담당: Convolution 연산부 RTL 구현**
-- 카메라 입력 영상에 대한 실시간 추론 파이프라인 구성
+> UART와 FSM을 활용한 PC·보드 통합 제어 스톱워치
 
-**Tech**: `SystemVerilog` `Vivado` `Python`
+- UART 수신기 설계 (4-state FSM, 16배 오버샘플링)
+- ASCII Decoder로 PC 입력을 제어 신호로 변환, 보드 입력과 단일 경로로 통합
+- FSM 기반 Control Unit (Watch/Stopwatch 모드 전환) 및 FND Controller 구현
 
-🔗 [Repository](https://github.com/Junbro0608/CNN-Based_Gesture_Smart_Camera)
+**Tech**: `Verilog` `UART` `FSM` `Basys3`
+
+🔗 [Repository](https://github.com/Yoonjiwon-0305/verilog)
 
 ---
 
