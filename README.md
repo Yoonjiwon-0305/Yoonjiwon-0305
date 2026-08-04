@@ -5,7 +5,7 @@
 한성대학교 전자시스템반도체학과를 졸업하고, 대한상공회의소 서울기술교육센터 **온디바이스 AI 반도체 설계 과정(1기)** 을 수료했습니다.
 RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바이스 AI 시스템까지 아우르는 프로젝트를 수행해 왔습니다.
 
-📧 ygw4904@naver.com · 🐙 [@Yoonjiwon-0305](https://github.com/Yoonjiwon-0305)
+📧 ygw8878@gmail.com · 🐙 [@Yoonjiwon-0305](https://github.com/Yoonjiwon-0305)
 
 ---
 
