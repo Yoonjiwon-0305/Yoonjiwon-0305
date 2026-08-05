@@ -1,4 +1,4 @@
-# 👋 안녕하세요, 윤지원입니다.
+<img width="905" height="567" alt="image" src="https://github.com/user-attachments/assets/2f20920b-95aa-47aa-81b9-6971f2225ee7" /># 👋 안녕하세요, 윤지원입니다.
 
 **설계한 것이 의도대로 동작함을 증명하는 일에 집중하는 하드웨어 엔지니어입니다.**
 
@@ -136,7 +136,7 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 **Tech**: `SystemVerilog` `OV7670` `SCCB` `VGA` `SPI` `Basys3`
 
-🔗 [OV7670 / VGA Controller](https://github.com/Junbro0608/VGA_CAM_Project/tree/main/Lab00_VGA_OV7670_ctrl) · [Video Processing](https://github.com/Yoonjiwon-0305/Video-Processing)
+🔗 [VGA_CAM_Project](https://github.com/Junbro0608/VGA_CAM_Project)
 
 ---
 
