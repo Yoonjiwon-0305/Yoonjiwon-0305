@@ -207,7 +207,7 @@ RTL 설계와 UVM 검증을 중심으로, 실시간 영상 처리와 온디바�
 
 **Tech**: `SystemVerilog` `Vivado` `Python`
 
-🔗  [Repository](https://github.com/Junbro0608/CNN-Based_Gesture_Smart_Camera/tree/jiwon))
+🔗  [Repository](https://github.com/Junbro0608/CNN-Based_Gesture_Smart_Camera/tree/jiwon)
 
 ---
 
